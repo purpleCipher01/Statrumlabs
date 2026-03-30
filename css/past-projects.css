@@ -1,0 +1,363 @@
+﻿/**
+ * ============================================
+ * STRATUM LABS - PAST PROJECTS PAGE STYLESHEET
+ * ============================================
+ * Simplified past projects page styles
+ */
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 2rem;
+    background: linear-gradient(135deg, #0A0A0F 0%, #151E3F 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-left {
+    flex: 1;
+    max-width: 600px;
+}
+
+.intro-label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #A78BFA;
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    color: #F1EEFF;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    color: #7B6FAA;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.badge {
+    display: inline-block;
+    background: linear-gradient(45deg, #7C5CFC, #A78BFA);
+    color: #F1EEFF;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.hero-right {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* ============================================
+   TIMELINE SECTION
+   ============================================ */
+.timeline-section {
+    padding: 80px 0;
+    background-color: #F1EEFF;
+}
+
+.timeline-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.timeline-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    color: #F1EEFF;
+    margin-bottom: 4rem;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, #7C5CFC, #151E3F);
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.timeline-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.timeline-spacer {
+    flex: 1;
+}
+
+.timeline-dot {
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(45deg, #7C5CFC, #A78BFA);
+    border-radius: 50%;
+    border: 4px solid #13131F;
+    position: relative;
+    z-index: 2;
+}
+
+.timeline-content-left,
+.timeline-content-right {
+    flex: 1;
+    padding: 0 2rem;
+}
+
+.timeline-card {
+    background: linear-gradient(135deg, #151E3F 0%, #0A0A0F 100%);
+    border: 1px solid rgba(124, 92, 252, 0.26);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+    transform: translateY(-5px);
+    border-color: #A78BFA;
+    box-shadow: 0 10px 30px rgba(124, 92, 252, 0.25);
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #A78BFA;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.timeline-project-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F1EEFF;
+    margin-bottom: 1rem;
+}
+
+.timeline-description {
+    color: #7B6FAA;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.timeline-result {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #A78BFA;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: 250px;
+    background-color: #151E3F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6B7A96;
+    font-size: 0.95rem;
+}
+
+.project-content {
+    padding: 2rem;
+}
+
+.project-date {
+    color: #6B7A96;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #F1EEFF;
+}
+
+.project-content p {
+    color: #7B6FAA;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+}
+
+.project-tech {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tech-tag {
+    background-color: rgba(124, 92, 252, 0.08);
+    color: #7B6FAA;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.8rem;
+}
+
+/* ============================================
+   CONTENT SECTIONS
+   ============================================ */
+.section {
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.content-card {
+    background-color: #151E3F;
+    border: 1px solid rgba(124, 92, 252, 0.09);
+    border-radius: 12px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.content-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+    color: #F1EEFF;
+}
+
+.content-card p {
+    color: #7B6FAA;
+    line-height: 1.7;
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding: 60px 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .timeline {
+        padding: 0 1rem;
+    }
+
+    .timeline-line {
+        left: 30px;
+    }
+
+    .timeline-item {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-bottom: 3rem;
+    }
+
+    .timeline-item:nth-child(even) .timeline-content-right {
+        order: -1;
+    }
+
+    .timeline-dot {
+        align-self: flex-start;
+        margin-left: 11px;
+        margin-bottom: 1rem;
+    }
+
+    .timeline-content-left,
+    .timeline-content-right {
+        padding: 0;
+        width: 100%;
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 1rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .timeline-title {
+        font-size: 2rem;
+    }
+
+    .timeline {
+        padding: 0 0.5rem;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        width: 16px;
+        height: 16px;
+        margin-left: 2px;
+    }
+
+    .timeline-card {
+        padding: 1.25rem;
+    }
+
+    .timeline-project-title {
+        font-size: 1.25rem;
+    }
+
+    .content-card {
+        padding: 1.5rem;
+    }
+}

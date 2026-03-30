@@ -1,0 +1,185 @@
+﻿/* ============================================================
+   SERVICES PAGE — LIGHT THEME
+   ============================================================ */
+
+/* ─── UTILITIES ─────────────────────────────────────────── */
+.sv-eyebrow {
+  display: inline-flex; align-items: center; gap: 0.45rem;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.13em;
+  text-transform: uppercase; padding: 0.35rem 0.9rem;
+  border-radius: 999px; margin-bottom: 1.1rem;
+  color: #F1EEFF; background: rgba(255,255,255,0.15);
+}
+.sv-eyebrow--dark { color: #6B46FA; background: rgba(107,70,250,0.08); }
+.sv-eyebrow--light { color: #F1EEFF; background: rgba(255,255,255,0.15); }
+.sv-accent { color: #6B46FA; }
+.sv-section-header { text-align: center; max-width: 580px; margin: 0 auto 3.5rem; }
+.sv-section-header h2 { font-size: clamp(1.8rem,4vw,2.6rem); font-weight: 800; color: #1A0F42; margin-bottom: 0.6rem; line-height: 1.2; }
+.sv-section-header p { color: #7B6FAA; font-size: 1.05rem; line-height: 1.65; }
+
+/* ─── PAGE HEADER ────────────────────────────────────────── */
+.sv-header {
+  padding: 9rem 1.5rem 6rem;
+  background: linear-gradient(135deg, #1A0F42 0%, #3B1FA8 50%, #0E3A5C 100%);
+  text-align: center; position: relative; overflow: hidden;
+}
+.sv-header__bg {
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(107,70,250,0.25) 0%, transparent 70%);
+  pointer-events: none;
+}
+.sv-header__inner { position: relative; z-index: 2; max-width: 680px; margin: 0 auto; }
+.sv-header h1 {
+  font-size: clamp(2.2rem,5vw,3.6rem); font-weight: 800;
+  color: #F1EEFF; line-height: 1.1; margin-bottom: 1.2rem;
+}
+.sv-header h1 .sv-accent { color: #22D3EE; }
+.sv-header > .container > p,
+.sv-header__inner > p { font-size: 1.1rem; color: #C4B5FD; max-width: 520px; margin: 0 auto 2rem; line-height: 1.65; }
+.sv-header__tags {
+  display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap;
+}
+.sv-header__tags span {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.82rem; font-weight: 600;
+  background: rgba(255,255,255,0.1); color: #F1EEFF;
+  padding: 0.45rem 1rem; border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.18);
+}
+.sv-header__tags span i { color: #34D399; }
+
+/* ─── SERVICES GRID ──────────────────────────────────────── */
+.sv-grid-section { padding: 7rem 0; background: #F7F5FF; }
+.sv-grid {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.75rem;
+}
+.sv-card {
+  background: #FFFFFF; border-radius: 20px; padding: 2.2rem 2rem;
+  border: 1px solid rgba(107,70,250,0.1);
+  position: relative; overflow: hidden;
+  transition: transform 0.32s ease, box-shadow 0.32s ease;
+}
+.sv-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 18px 48px rgba(107,70,250,0.13);
+}
+.sv-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px;
+  border-radius: 20px 20px 0 0;
+  transition: opacity 0.3s;
+}
+.sv-card--violet::before { background: linear-gradient(90deg,#6B46FA,#A78BFA); }
+.sv-card--cyan::before   { background: linear-gradient(90deg,#0891B2,#22D3EE); }
+
+.sv-card__num {
+  font-size: 0.65rem; font-weight: 800; letter-spacing: 0.13em;
+  text-transform: uppercase; color: rgba(107,70,250,0.3); margin-bottom: 0.9rem;
+}
+.sv-card__icon {
+  width: 52px; height: 52px; border-radius: 14px; margin-bottom: 1.2rem;
+  display: flex; align-items: center; justify-content: center; font-size: 1.3rem;
+}
+.sv-card--violet .sv-card__icon { background: rgba(107,70,250,0.1); color: #6B46FA; }
+.sv-card--cyan   .sv-card__icon { background: rgba(8,145,178,0.1);  color: #0891B2; }
+
+.sv-card h3 { font-size: 1.1rem; font-weight: 700; color: #1A0F42; margin-bottom: 0.65rem; }
+.sv-card > p { font-size: 0.9rem; color: #7B6FAA; line-height: 1.65; margin-bottom: 1.1rem; }
+
+.sv-card__list {
+  list-style: none; padding: 0; margin: 0 0 1.5rem; display: flex; flex-direction: column; gap: 0.45rem;
+}
+.sv-card__list li {
+  font-size: 0.84rem; color: #3D2B8A; padding-left: 1.2rem; position: relative;
+}
+.sv-card__list li::before {
+  content: '›'; position: absolute; left: 0; font-weight: 800;
+}
+.sv-card--violet .sv-card__list li::before { color: #6B46FA; }
+.sv-card--cyan   .sv-card__list li::before { color: #0891B2; }
+
+.sv-card__link {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.85rem; font-weight: 700; text-decoration: none;
+  transition: gap 0.2s;
+}
+.sv-card--violet .sv-card__link { color: #6B46FA; }
+.sv-card--cyan   .sv-card__link { color: #0891B2; }
+.sv-card__link:hover { gap: 0.7rem; }
+
+/* ─── PROCESS ────────────────────────────────────────────── */
+.sv-process { padding: 7rem 0; background: #FFFFFF; }
+.sv-process__steps {
+  display: flex; align-items: flex-start; gap: 0; flex-wrap: nowrap;
+}
+.sv-step {
+  flex: 1; background: #F7F5FF; border-radius: 20px;
+  padding: 2rem 1.5rem; text-align: center;
+  border: 1px solid rgba(107,70,250,0.09);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sv-step:hover { transform: translateY(-5px); box-shadow: 0 12px 32px rgba(107,70,250,0.1); }
+.sv-step__connector {
+  width: 3rem; height: 2px; flex-shrink: 0; align-self: center; margin-top: -1px;
+  background: linear-gradient(90deg, #6B46FA, #0891B2);
+}
+.sv-step__num {
+  width: 52px; height: 52px; border-radius: 14px; margin: 0 auto 1.2rem;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; font-weight: 800; color: #FFFFFF;
+  background: linear-gradient(135deg,#6B46FA,#0891B2);
+}
+.sv-step h3 { font-size: 0.98rem; font-weight: 700; color: #1A0F42; margin-bottom: 0.5rem; }
+.sv-step p  { font-size: 0.85rem; color: #7B6FAA; line-height: 1.6; }
+
+/* ─── WHY ────────────────────────────────────────────────── */
+.sv-why { padding: 7rem 0; background: #F0EDFF; }
+.sv-why__grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+.sv-why-card {
+  background: #FFFFFF; border-radius: 20px; padding: 2.2rem 1.6rem; text-align: center;
+  border: 1px solid rgba(107,70,250,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.sv-why-card:hover { transform: translateY(-6px); box-shadow: 0 14px 36px rgba(107,70,250,0.12); }
+.sv-why-card i {
+  font-size: 2.2rem; margin-bottom: 1.1rem; display: block;
+  background: linear-gradient(135deg,#6B46FA,#0891B2);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.sv-why-card h3 { font-size: 1rem; font-weight: 700; color: #1A0F42; margin-bottom: 0.5rem; }
+.sv-why-card p  { font-size: 0.87rem; color: #7B6FAA; line-height: 1.6; }
+
+/* ─── CTA ────────────────────────────────────────────────── */
+.sv-cta {
+  padding: 8rem 2rem; text-align: center;
+  background: linear-gradient(135deg,#1A0F42 0%,#2E1A8E 50%,#0D3A5C 100%);
+  position: relative; overflow: hidden;
+}
+.sv-cta__glow {
+  position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%,-50%);
+  width: 640px; height: 300px;
+  background: radial-gradient(ellipse, rgba(34,211,238,0.2) 0%, transparent 70%);
+  pointer-events: none;
+}
+.sv-cta__inner { position: relative; z-index: 2; max-width: 620px; margin: 0 auto; }
+.sv-cta h2 { font-size: clamp(2rem,4.5vw,3rem); font-weight: 800; color: #F1EEFF; margin: 0.6rem 0 1rem; }
+.sv-cta p  { font-size: 1.05rem; color: #C4B5FD; line-height: 1.65; margin-bottom: 2.5rem; }
+.sv-cta__btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.sv-ghost-btn {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  padding: 0.85rem 1.8rem; border-radius: 10px;
+  font-weight: 600; font-size: 0.95rem; font-family: inherit; text-decoration: none;
+  border: 2px solid rgba(255,255,255,0.3); color: #F1EEFF; background: transparent;
+  transition: background 0.25s, border-color 0.25s;
+}
+.sv-ghost-btn:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.55); }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────── */
+@media (max-width: 1024px) { .sv-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 768px) {
+  .sv-grid { grid-template-columns: 1fr; }
+  .sv-why__grid { grid-template-columns: repeat(2,1fr); }
+  .sv-process__steps { flex-direction: column; }
+  .sv-step__connector { width: 2px; height: 2rem; align-self: center; background: linear-gradient(180deg,#6B46FA,#0891B2); }
+}
+@media (max-width: 480px) { .sv-why__grid { grid-template-columns: 1fr; } }
