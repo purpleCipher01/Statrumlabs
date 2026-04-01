@@ -1,13 +1,8 @@
-﻿/**
- * ============================================
- * STRATUM LABS - GLOBAL DESIGN SYSTEM v2
- * Dark theme default | Light theme per page
- * ============================================
- */
+/* global.css � shared styles, design tokens, and component defaults */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
-/* ============================================
-   DESIGN TOKENS
+/* ---
+   Design Tokens
    ============================================ */
 :root {
   /* Dark theme (default - pages 1,3,5,7) */
@@ -47,7 +42,7 @@
   --shadow-primary:   rgba(124,92,252,0.40);
 }
 
-/* Light theme — add class="page-light" to <body> */
+/* Light theme � add class="page-light" to <body> */
 .page-light {
   --bg-page:          #F7F5FF;
   --bg-section:       #F0ECFF;
@@ -63,9 +58,7 @@
   --bg-footer:        #070710;
 }
 
-/* ============================================
-   RESET & BASE
-   ============================================ */
+/* RESET & BASE */
 *,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
 body {
@@ -85,9 +78,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 ul,ol { list-style: none; }
 strong,b { font-weight: 600; }
 
-/* ============================================
-   TYPOGRAPHY
-   ============================================ */
+/* TYPOGRAPHY */
 h1,h2,h3,h4,h5,h6 {
   font-weight: 600;
   line-height: 1.2;
@@ -111,9 +102,7 @@ p:last-child { margin-bottom: 0; }
   margin-bottom: 8px;
 }
 
-/* ============================================
-   LAYOUT
-   ============================================ */
+/* LAYOUT */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -125,9 +114,7 @@ p:last-child { margin-bottom: 0; }
 .text-muted { color: var(--text-muted); }
 .highlight { color: var(--accent-primary); }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+/* NAVBAR */
 .main-header {
   position: fixed;
   top: 0; left: 0;
@@ -189,9 +176,7 @@ p:last-child { margin-bottom: 0; }
 }
 .nav-cta:hover { transform: scale(1.03); filter: brightness(1.1); color: #FFFFFF !important; }
 
-/* ============================================
-   BUTTONS
-   ============================================ */
+/* BUTTONS */
 .btn-primary, .btn, .cta-primary {
   display: inline-flex;
   align-items: center;
@@ -238,9 +223,7 @@ p:last-child { margin-bottom: 0; }
   color: var(--text-heading);
 }
 
-/* ============================================
-   CARDS
-   ============================================ */
+/* CARDS */
 .card {
   background: var(--bg-card);
   border: 0.5px solid var(--border-card);
@@ -267,9 +250,7 @@ p:last-child { margin-bottom: 0; }
 .card-title { font-size: 18px; font-weight: 500; color: var(--text-heading); margin-bottom: 8px; }
 .card-text  { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
-/* ============================================
-   SECTION HEADERS
-   ============================================ */
+/* SECTION HEADERS */
 .section-header { margin-bottom: 48px; }
 .section-header .label,
 .section-header .section-label { display: block; margin-bottom: 8px; }
@@ -288,9 +269,7 @@ p:last-child { margin-bottom: 0; }
 }
 .draw-line.visible { width: 100%; }
 
-/* ============================================
-   SCROLL ANIMATIONS
-   ============================================ */
+/* SCROLL ANIMATIONS */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -304,9 +283,7 @@ p:last-child { margin-bottom: 0; }
 .fade-up:nth-child(5) { transition-delay: 320ms; }
 .fade-up:nth-child(6) { transition-delay: 400ms; }
 
-/* ============================================
-   FOOTER
-   ============================================ */
+/* FOOTER */
 .main-footer {
   background: var(--bg-footer);
   border-top: 0.5px solid #1e1e2e;
@@ -347,7 +324,7 @@ p:last-child { margin-bottom: 0; }
 .footer-social-icon[aria-label="LinkedIn"] { color: #0A66C2; border-color: rgba(10,102,194,0.35); }
 .footer-social-icon[aria-label="Discord"] { color: #5865F2; border-color: rgba(88,101,242,0.35); }
 .footer-social-icon[aria-label="Telegram"] { color: #0088cc; border-color: rgba(0,136,204,0.35); }
-/* Hover — fill with brand color */
+/* Hover � fill with brand color */
 .footer-social-icon[aria-label="X"]:hover { background: #000; color: #fff; border-color: #000; box-shadow: 0 4px 16px rgba(0,0,0,0.28); transform: translateY(-3px); }
 .footer-social-icon[aria-label="LinkedIn"]:hover { background: #0A66C2; color: #fff; border-color: #0A66C2; box-shadow: 0 4px 16px rgba(10,102,194,0.35); transform: translateY(-3px); }
 .footer-social-icon[aria-label="Discord"]:hover { background: #5865F2; color: #fff; border-color: #5865F2; box-shadow: 0 4px 16px rgba(88,101,242,0.35); transform: translateY(-3px); }
@@ -383,9 +360,7 @@ p:last-child { margin-bottom: 0; }
 .flex-between { justify-content: space-between; align-items: center; }
 .flex-column  { flex-direction: column; }
 
-/* ============================================
-   HAMBURGER BUTTON
-   ============================================ */
+/* HAMBURGER BUTTON */
 .nav-burger {
   display: none;
   flex-direction: column;
@@ -415,9 +390,7 @@ p:last-child { margin-bottom: 0; }
 .nav-open .nav-burger span:nth-child(2) { opacity: 0; transform: scaleX(0); }
 .nav-open .nav-burger span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-/* ============================================
-   RESPONSIVE
-   ============================================ */
+/* RESPONSIVE */
 @media (max-width: 1024px) { .main-header { padding: 0 40px; } }
 
 @media (max-width: 768px) {
